@@ -22,9 +22,9 @@ public class MultiplicationTable {
 
     public String generateTable(int start, int end) {
         StringBuffer sb = new StringBuffer();
-        for (int i = start; i <= end; i++) {
-            String line = generateLine(start, i);
-            if (i == end) {
+        for (int index = start; index <= end; index++) {
+            String line = generateLine(start, index);
+            if (index == end) {
                 sb.append(line);
             } else {
                 sb.append(line).append("\r\n");
@@ -35,9 +35,9 @@ public class MultiplicationTable {
 
     public String generateLine(int start, int row) {
         StringBuffer sb = new StringBuffer();
-        for (int i = start; i <= row; i++) {
-            String expression = generateSingleExpression(i, row);
-            if (i == row) {
+        for (int index = start; index <= row; index++) {
+            String expression = generateSingleExpression(index, row);
+            if (index == row) {
                 sb.append(expression);
             } else {
                 sb.append(expression).append("  ");
