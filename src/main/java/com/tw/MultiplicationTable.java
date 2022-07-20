@@ -34,16 +34,16 @@ public class MultiplicationTable {
     }
 
     public String generateLine(int start, int row) {
-        StringBuffer sb = new StringBuffer();
+        StringBuffer line = new StringBuffer();
         for (int index = start; index <= row; index++) {
             String expression = generateSingleExpression(index, row);
             if (index == row) {
-                sb.append(expression);
+                line.append(expression);
             } else {
-                sb.append(expression).append("  ");
+                line.append(expression).append("  ");
             }
         }
-        return sb.toString();
+        return line.toString();
     }
 
     public String generateSingleExpression(int multiplicand, int multiplier) {
